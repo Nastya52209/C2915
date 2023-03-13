@@ -1,0 +1,14 @@
+# Grey - это кличка
+name = input("Write your name:")
+class Cat:
+    def __init__(self, name: str, color: str, age: int, gender: str):
+        self.name = name
+        self.color = color
+        self.age = age
+        self.gender = gender
+
+    def eat (self, other):
+        print(f" {self.name}: Meow, I want eat, {name}!")
+
+grey = Cat("Grey", "grey", 1, "male")
+grey.eat (name)
