@@ -1,0 +1,79 @@
+class Base:
+    name = "Base"
+    point = 10
+ 
+    def teleport(self):
+        print(f"{self.name} casting teleport")
+ 
+ 
+class Mage(Base):
+    name = "Mage"
+ 
+    def fireball(self):
+        print(f"{self.name} casting fireball")
+ 
+ 
+class Warrior(Base):
+    name = "Warrior"
+ 
+    def splash(self):
+        print(f"{self.name} casting splash")
+ 
+ 
+class Archer(Base):
+    name = "Archer"
+ 
+    def invisibility(self):
+        print(f"{self.name} casting invisibility")
+ 
+ 
+class BattleMage(Mage, Warrior):
+    name = "Battle Mage"
+ 
+    def enchantWeapon(self):
+        print(f"{self.name} casting enchant weapon")
+
+        
+class Pathifinder(Warrior, Archer):
+    name = "Pathifinder"
+
+    def gun(self):
+         print(f"{self.name} gun")
+
+
+class VampireHunter(Mage, Archer):
+    name = "Vampire Hunter"
+    def woodenStake(self):
+         print(f"{self.name} wooden stake")
+
+
+class Hero(BattleMage, Pathifinder, VampireHunter):
+    name = "Hero"
+    def timeTravel(self):
+         print(f"{self.name} time travel")
+ 
+ 
+base = Base()
+mage = Mage()
+warrior = Warrior()
+archer = Archer()
+battleMage = BattleMage()
+pathifinder = Pathifinder()
+hero = Hero()
+vampireHunter =  VampireHunter()
+ 
+mage.fireball()
+warrior.splash()
+archer.invisibility()
+base.teleport()
+mage.teleport()
+archer.teleport()
+warrior.teleport()
+ 
+battleMage.fireball()
+battleMage.splash()
+battleMage.teleport()
+battleMage.enchantWeapon()
+pathifinder.gun()
+hero.timeTravel
+vampireHunter.woodenStake()
