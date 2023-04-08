@@ -1,16 +1,13 @@
-class GameMenu:
-    
-    def __init__(self):
-        self.start_game = "Добро пожаловать в нашу игру!"
-        self.exit_game = "Вы уверены, что хотите выйти из игры?"
-    
-    def start(self):
-        print(self.start_game)
-        
-    def exit(self):
-        answer = input(self.exit_game + " (yes/no): ")
-        if answer.lower() == "yes":
-            print("До свидания!")
-            exit()
-        else:
-            print("Отлично! Продолжаем играть.")
+class Phone:
+    brand = input("Бренд вашего телефонона: ")
+    price = input("Цена вашего телефона: ")
+    def __init__(self, brand, model, price):
+        self.brand = brand
+        self.price = price
+
+    def make_call(self, phone_number):
+        phone_number = input("Введите номер телефона: ")
+        print(f"Звонок {phone_number}...")
+
+    def send_message(self, phone_number, message):
+        print(f"Отправляем сообщение {phone_number}: {message}")
