@@ -11,7 +11,6 @@ class Mailbox:
         else:
             return None
  
- 
 mailbox = Mailbox()
 mailbox.receive_mail("Привет")
 mailbox.receive_mail("Как")
